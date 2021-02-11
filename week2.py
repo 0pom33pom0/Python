@@ -1,35 +1,16 @@
 """
+แบบฝึกหัดที่2.1
 n1=input("Input First Number\n")
 n2=input("Input Second Numder\n")
 print(n1," = ",n2,":",n1==n2)
 print(n1," > ",n2,":",n1>n2)
 print(n1," < ",n2,":",n1<n2)
-a = 60
-b = 13
-c = 0
-
-c = a & b
-print(c)
-
-c = a | b
-print(c)
-
-c = a ^ b
-print(c)
-
-c = ~a
-print(c)
-
-c = a << 2
-print(c)
-
-c = a >> 2
-print(c)
+แบบฝึดหัดที่2.2
 print("Day Converter Program")
 days = float(input("Input num of Days --> "))
 print(days," Days --> Hour ",days*24," Hours ")
-print(days," Days --> Hour ",(days*24)*60," Hours ")
-print(days," Days --> Hour ",((days*24)*60)*60," Hours ")
+print(days," Days --> Hour ",(days*24)*60," Minutes ")
+print(days," Days --> Hour ",((days*24)*60)*60," Seconds ")
 
 friend = ["jan","cream","phu","bam","aom","pee","bas","kong","da","james"]
 friend.append("dome")
