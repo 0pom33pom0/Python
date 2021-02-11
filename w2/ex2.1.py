@@ -1,0 +1,5 @@
+n1=input("Input First Number\n")
+n2=input("Input Second Numder\n")
+print(n1," = ",n2,":",n1==n2)
+print(n1," > ",n2,":",n1>n2)
+print(n1," < ",n2,":",n1<n2)
