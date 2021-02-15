@@ -156,9 +156,27 @@ print(datenew)
 print('-'*105+'\n{0:-<15}{1:-<15}{2:-<15}{3:-<15}{4:-<15}{5:-<15}{6:-<15}'.format('No.','PTS','TIME','COMPETITOR','HIT FACTOR','STATE POINTS','STATE PERCENT\n'+'-'*105))
 for i in range(num):
     print('{0: <15}{1: <15}{2: <15}{3: <15}{4: <15}{5: <15}{6: <15}'.format(i+1,pts[i],time[i],name[i],'%.4f'%hit[i],'%.4f'%float(hit[i]/hit[0]*50),'%.4f'%float((hit[i]/hit[0]*50)/(hit[0]/hit[0]*50)*100)))
-"""
+
 print("Day Converter Program")
 days = float(input("Input num of Days --> "))
 print(days," Days --> Hour ",days*24," Hours ")
 print(days," Days --> Hour ",(days*24)*60," Hours ")
-print(days," Days --> Hour ",((days*24)*60)*60," Hours ")   
+print(days," Days --> Hour ",((days*24)*60)*60," Hours ")
+"""
+import sqlite3
+conn = sqlite3.connect(r"D:\w2\Suracha_python\long.db")
+n = "พอม"
+a = "s"
+c = conn.cursor()
+kk = '''INSERT INTO ll (name,email) AVLUES (?,?)'''
+data = (n,a)
+c.execute(kk,data)
+conn.commit()
+c.close()
+data = []
+c = conn.cursor()
+c.execute('''SELECT * FROM ll ''')
+result = c.fetchall()
+for x in result:
+    if str(x)!=",":
+        print(x)
